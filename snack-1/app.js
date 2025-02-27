@@ -39,7 +39,7 @@ function getTitle(id) {
                     new Promise((resolve, reject) => {
                         fetch(`https://dummyjson.com/users/${user_id}`)
                             .then((res) => res.json())
-                            .then(user => resolve(console.log(obj, user)))
+                            .then(user => resolve(console.log({ ...obj, user })))
                             .catch(err => reject(console.error(err)))
                     }))
 
